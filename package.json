@@ -1,18 +1,17 @@
 {
-    "private": false,
-    "scripts": {
-        "prepare": "nitropack prepare",
-        "dev": "nitropack dev",
-        "build": "nitropack build",
-        "format": "bunx prettier --write .",
-        "preview": "bun run .output/server/index.mjs"
-    },
-    "dependencies": {
-        "is-mobile": "^4.0.0",
-        "mongodb": "^6.3.0",
-        "nitropack": "latest"
-    },
-    "devDependencies": {
-        "prettier": "^3.2.5"
-    }
+  "private": false,
+  "scripts": {
+    "prepare": "nitropack prepare",
+    "dev": "nitropack dev",
+    "build": "nitropack build",
+    "format": "bunx prettier --write .",
+    "preview": "bun run .output/server/index.mjs"
+  },
+  "dependencies": {
+    "mongodb": "^6.3.0",
+    "nitropack": "latest"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  }
 }

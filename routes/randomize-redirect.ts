@@ -1,5 +1,4 @@
 import getRandomEpisodeFromDB from '../lib/getRandomEpisodeFromDB'
-import mobile from 'is-mobile'
 
 export default eventHandler(async event => {
     try {
@@ -8,7 +7,7 @@ export default eventHandler(async event => {
 
         const userAgent = getRequestHeader(event, 'user-agent')
 
-        if (mobile({ ua: userAgent })) {
+        if (/iPad|iPhone|iPod/.test(userAgent)) {
             destination = destination.replace('https://', 'nflx://')
         }
 
