@@ -1,42 +1,27 @@
-# Nitro Minimal Starter
+# Friends Episodes API
 
-Look at the [Nitro documentation](https://nitro.unjs.io/) to learn more.
+List and randomize friends episode.
 
-## Setup
+URL:  
+[https://friends-episodes.vercel.app](https://friends-episodes.vercel.app)
 
-Make sure to install the dependencies:
+Episode Schema:
 
-```bash
-# npm
-npm install
-
-# yarn
-yarn install
-
-# pnpm
-pnpm install
+```json
+{
+    "code": "string",
+    "season": "number",
+    "no_in_season": "number",
+    "title": "string",
+    "synopsis": "string",
+    "image_url": "string",
+    "netflix_url": "string"
+}
 ```
 
-## Development Server
+## Available endpoints
 
-Start the development server on <http://localhost:3000>
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nitro.unjs.io/deploy) for more information.
+-   `/seasons/:season/episodes`, returns array of `Episodes` from given `:season`
+-   `/seasons/:season/episodes/:noInSeason`, returns object of `Episode`
+-   `/randomize`, randomize an episode and returns the `Episode`
+-   `/randomize-redirect`, randomize an episode and directly takes you to Netflix
