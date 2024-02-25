@@ -1,4 +1,5 @@
-import { db } from '../../../../lib/db'
+import { db } from '~/lib/db'
+import { Episode } from '~/types'
 
 export default eventHandler(async event => {
     try {
@@ -6,7 +7,7 @@ export default eventHandler(async event => {
         const noInSeason = getRouterParam(event, 'noInSeason')
 
         const episode = await db
-            .collection('episodes')
+            .collection<Episode>('episodes')
             .findOne(
                 { season: Number(season), no_in_season: Number(noInSeason) },
                 { projection: { _id: 0 } }

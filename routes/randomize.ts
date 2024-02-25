@@ -1,4 +1,4 @@
-import getRandomEpisodeFromDB from '../lib/getRandomEpisodeFromDB'
+import getRandomEpisodeFromDB from '~/lib/getRandomEpisodeFromDB'
 
 export default eventHandler(async event => {
     try {

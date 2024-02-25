@@ -1,15 +1,7 @@
-import { db } from '../lib/db'
-import getRandomIntInclusive from '../lib/getRandomIntInclusive'
+import { db } from '~/lib/db'
+import getRandomIntInclusive from '~/lib/getRandomIntInclusive'
 
-interface Episode {
-    code: string
-    season: number
-    no_in_season: number
-    title: string
-    synopsis: string
-    image_url: string
-    netflix_url: string
-}
+import { Episode } from '@/types'
 
 const getRandomEpisodeFromDB = async (): Promise<Episode> => {
     const EPISODE_COUNT = {
