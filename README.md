@@ -3,7 +3,7 @@
 List and randomize friends episode.
 
 URL:
-[https://friends-episodes.vercel.app](https://friends-episodes.vercel.app)
+[https://friends-episodes-api.vercel.app](https://friends-episodes-api.vercel.app)
 
 Episode Schema:
 
