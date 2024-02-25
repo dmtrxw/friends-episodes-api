@@ -8,6 +8,7 @@
         "preview": "bun run .output/server/index.mjs"
     },
     "dependencies": {
+        "mongodb": "^6.3.0",
         "nitropack": "latest"
     },
     "devDependencies": {
