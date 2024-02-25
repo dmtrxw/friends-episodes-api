@@ -2,7 +2,7 @@
 
 List and randomize friends episode.
 
-URL:  
+URL:
 [https://friends-episodes.vercel.app](https://friends-episodes.vercel.app)
 
 Episode Schema:
@@ -21,7 +21,7 @@ Episode Schema:
 
 ## Available endpoints
 
--   `/seasons/:season/episodes`, returns array of `Episodes` from given `:season`
--   `/seasons/:season/episodes/:noInSeason`, returns object of `Episode`
--   `/randomize`, randomize an episode and returns the `Episode`
--   `/randomize-redirect`, randomize an episode and directly takes you to Netflix
+-   `GET /seasons/:season/episodes`, returns array of `Episodes` from given `:season`
+-   `GET /seasons/:season/episodes/:noInSeason`, returns object of `Episode`
+-   `GET /randomize`, randomize an episode and returns the `Episode`
+-   `GET /randomize-redirect`, randomize an episode and directly takes you to Netflix
