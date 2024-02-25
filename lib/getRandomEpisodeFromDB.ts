@@ -1,7 +1,6 @@
-import { db } from '~/lib/db'
-import getRandomIntInclusive from '~/lib/getRandomIntInclusive'
-
-import { Episode } from '@/types'
+import { Episode } from '../types'
+import { db } from './db'
+import getRandomIntInclusive from './getRandomIntInclusive'
 
 const getRandomEpisodeFromDB = async (): Promise<Episode> => {
     const EPISODE_COUNT = {

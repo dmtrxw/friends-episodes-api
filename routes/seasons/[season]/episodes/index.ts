@@ -1,5 +1,5 @@
-import { db } from '~/lib/db'
-import { Episode } from '~/types'
+import { db } from '../../../../lib/db'
+import { Episode } from '../../../../types'
 
 export default eventHandler(async event => {
     try {
