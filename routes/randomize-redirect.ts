@@ -1,9 +1,18 @@
 import getRandomEpisodeFromDB from '../lib/getRandomEpisodeFromDB'
+import isMobileBrowser from '../lib/isMobileBrowser'
 
 export default eventHandler(async event => {
     try {
         const episode = await getRandomEpisodeFromDB()
-        sendRedirect(event, episode.netflix_url)
+        let destination = episode.netflix_url
+
+        const userAgent = getRequestHeader(event, 'user-agent')
+
+        if (isMobileBrowser(userAgent)) {
+            destination = destination.replace('https://', 'nflx://')
+        }
+
+        sendRedirect(event, destination)
     } catch (err) {
         console.log(err)
 

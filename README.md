@@ -22,11 +22,8 @@ Episode Schema:
 ## Available endpoints
 
 JSON
+
 -   `GET /seasons/:season/episodes`, returns array of `Episodes` from given `:season`
 -   `GET /seasons/:season/episodes/:noInSeason`, returns object of `Episode`
 -   `GET /randomize`, randomize an episode and returns the `Episode`
-
-Desktop Web Browser Only:
--   `GET /randomize-redirect`, randomize an episode and directly takes you to Netflix
-
-> 📝 NOTE: If you want to handle deep linking into Netflix App (say from your mobile/tablet), change the `netflix_url` based on your client side's user agent.
+-   `GET /randomize-redirect`, randomize an episode and directly takes you to Netflix (Experimental)
