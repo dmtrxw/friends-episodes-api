@@ -8,6 +8,7 @@
         "preview": "bun run .output/server/index.mjs"
     },
     "dependencies": {
+        "is-mobile": "^4.0.0",
         "mongodb": "^6.3.0",
         "nitropack": "latest"
     },
