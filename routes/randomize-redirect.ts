@@ -3,7 +3,7 @@ import getRandomEpisodeFromDB from '../lib/getRandomEpisodeFromDB'
 export default eventHandler(async event => {
     try {
         const episode = await getRandomEpisodeFromDB()
-        return episode
+        sendRedirect(event, episode.netflix_url)
     } catch (err) {
         console.log(err)
 
