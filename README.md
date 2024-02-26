@@ -21,9 +21,15 @@ Episode Schema:
 
 ## Available endpoints
 
-JSON
+📃 JSON
 
 -   `GET /seasons/:season/episodes`, returns array of `Episodes` from given `:season`
 -   `GET /seasons/:season/episodes/:noInSeason`, returns object of `Episode`
--   `GET /randomize`, randomize an episode and returns the `Episode`
+-   `GET /randomize`, generate a random episode
+-   `GET /randomize-smile`, randomize a recommended episode to watch when you want to smile
+-   `GET /randomize-cry`, randomize a recommended episode to watch when you want to cry
+-   `GET /randomize-laugh`, randomize a recommended episode to watch when you want to laugh
+
+🧑‍🔬 Experimental
+
 -   `GET /randomize-redirect`, randomize an episode and directly takes you to Netflix (Experimental)
